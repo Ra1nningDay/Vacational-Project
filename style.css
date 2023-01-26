@@ -1,0 +1,555 @@
+/* ขนาดของเอลิเมนต์ ช่องว่างและขอบจะรวมอยู่ในค่าความกว้างและความสูงทั้งหมด */
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+
+body {font-family: 'Mitr', sans-serif;
+    margin: 0; 
+}  /* ไม่เว้นช่องว่างระหว่างหน้าเว็บกับขอบเบราว์เซอร์ */
+
+div {
+    display: block;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-image: linear-gradient(to right,#de629c , #fb8cff);
+}
+
+/* ปรับแต่งแถบเมนู */
+.navbar-brand{
+    font-weight: 500;
+    font-size: 24px;
+    color: white!important;
+}
+.nav-link{color: white!important;}
+.nav-link:hover{color: red!important;}
+
+@media(max-width:992px){
+    .nav-link{text-align: center;}
+}
+
+.nav-light , .navbar-nav , .nav-link{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    justify-content: center;
+    margin-left: 5px;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0.25em;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+ul li {display: inline-block;}
+ul li:hover {background: #ffffff;}
+ul li:hover ul {display: block;}
+
+ul li ul {
+    position: absolute;
+    width: 350px;
+    display: none;
+}
+
+ul li ul li { 
+    display: block; 
+}
+
+ul li ul li a {display:block !important;} 
+ul li ul li:hover {background: #666;}
+
+
+/* รูปภาพ */
+/* ปรับแต่งเนื้อหาในรูปภาพส่วนหัว */
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(18, 15, 45, .5);
+    z-index: 1;
+}
+
+/* Responvive */
+@media (max-width: 576px) {
+    .carousel-caption h4 {
+        font-size: 18px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 24px;
+        font-weight: 600 !important;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.carousel-indicators {
+    align-items: flex-end;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 5px;
+    height: 25px;
+}
+
+.carousel-indicators .active {
+    height: 45px;
+}
+
+/* เส้น */
+hr {
+    margin-left: 10em;
+    margin-right: 10em;
+    color: inherit;
+    border: 0;
+}
+
+
+/* เนื้อหาเกี่ยวกับเรา */
+
+.col-lg-4 p {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h1 {
+    display: block;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+h4 {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.text-space {
+    text-indent: 2em;
+}
+
+article {
+    float: right;
+    width: 75%;
+}
+
+#content1 {
+    float: right;
+    width: 75%;
+    padding: 10px;
+}
+
+aside {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+/* การกำหนดโครงสร้างเนื้อหาต่างๆของเว็บเพจให้อยู่ตรงกลาง */
+#warp {
+    margin: 0 auto;
+    width: 900px;
+}
+
+/* แบ่งบล็อกเนื้อหา3คอลลัม */
+.col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33%;
+    padding: 20px;
+}
+
+.col-lg-3 {
+    width: 50%;
+}
+
+
+/* ปรับแต่งบล็อกส่วนท้าย */
+footer {
+    clear: both; 
+    padding: 20px;
+    text-align: center;
+    background: grey;
+    color: white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* เนื้อหา ของผม*/
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.illustration{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+
+mark {
+    color:blue;
+    background-color: white;  
+    font-weight: bold
+}
+
+.image-container {
+    text-align: center;
+}
+
+.caption {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*aside*/
+.sidebar {
+    position: sticky;
+    position: -webkit-sticky;
+    overflow: auto;
+    top: 0;
+    z-index: 1;
+}
+
+/*sub-sidebar*/
+
+.sidebar a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #f2f2f2;
+    padding-left: 8px;
+  }
+
+.dropdown-container a{
+    color: #818181;
+}
+
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+
+/*ปุ่มside bar*/
+a.side:link {text-decoration:none;}
+a.side:visited {text-decoration:none;}
+a.side:hover {text-decoration:underline;}
+
+/*back to top*/
+html {
+    scroll-behavior: smooth;
+}
+
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #001a2e;
+}
+
+/* Tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    padding: 25px;
+    margin: 25px;
+    margin-top: -10px;
+  }
+  
+.tab button {
+    background-color: inherit;
+    float: left;
+    width: 14.28%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+
+  }
+  
+.tab button:hover {
+    background-color: #ddd;
+}
+  
+.tab button.active {
+    background-color: #ccc;
+    color: red !important;
+}
+  
+.tabcontent {
+    display: none;
+    padding: 25px;
+    border-top: none;
+    margin: 25px;
+    height: 200px;
+    background-color: #666;
+    text-align: center;
+}
+
+.tabcontent h3{
+    padding: 10px;
+    color: white;
+}
+
+.tabcontent button{
+    padding: 10px;
+}
+
+.tabcontent button a{
+    text-decoration: none;
+}
+
+.tabcontent button a:hover{
+    color: #333;
+}
+
+.coltab {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: center;
+}
+
+#bottomNav {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: center;
+}
+
+#facebook{
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    color: white;
+}
+
+.contact-link{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.contact-link:active{
+    text-decoration: none;
+}
+.contact-link:hover{
+    color: red !important;
+}
+
+
+#headContent {
+    text-align: center;
+    justify-content: center; 
+    background-color: rgb(17, 0, 255); 
+    margin-right: 190px; 
+    margin-left: 190px;
+    padding: 7px; 
+    color: white;
+}
+
+#headAbout{
+    text-align: center;
+    background-color: rgb(0, 255, 0); 
+    margin-right: 190px; 
+    margin-left: 190px;
+    padding: 7px; 
+    color: white;
+}
+
+#headLeft {
+    background-color: rgb(255, 0, 179); 
+    padding: 7px; 
+    color: white; 
+    border-radius: 25px;
+    margin-right: 470px;
+}
+
+#headTestB {
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 914px) {
+    .navbar-brand {
+        text-align: center;
+        white-space: unset;
+        margin: 0;
+        font-size: 12px;
+        font-weight: 400 !important;
+    }
+    .navbar-toggler {
+        padding: unset; 
+        font-size: unset;
+    }
+
+    .carousel-indicators {
+        display: none;
+    }
+
+    .p-5 {
+        padding: 0 !important;
+    }
+
+    #content1 {
+        width: 100%;
+    }
+
+    .col-lg-4 {
+        width: 100%;
+    }
+
+    .center {
+        margin-top: 2em;
+        width: 80%;
+    }
+
+    /* แบบทดสอบ */
+    #headTestB {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    /* หัวข้อในบทที่7 */
+    #headContent {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    /* เฉพาะหัวข้อบทที่ 7 ความสำคัญ/เสาหลัก/ข้อที่สาม */
+    #headFix {
+        margin-top: 3em;
+    }
+    #headLeft {
+        margin-right: 0;
+    }
+
+    #content1 {
+        padding: unset;
+    }
+    #bottomNav {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: unset;
+    }
+
+    aside {
+        width: 100%;
+        padding: 10px;
+        margin-left: 1px;
+        margin-bottom: 20px;
+    }
+    .sidebar {
+        position: unset;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 1;
+        top: 0;
+    }
+}
